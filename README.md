@@ -35,7 +35,7 @@ python agendarDesligamento.py
 ### 1. Baixe o Executável:
 
 - Acesse a página de lançamentos.
-- Baixe o arquivo agendarDesligamento.exe da versão mais recente.
+- Baixe o arquivo [agendarDesligamento.exe](https://github.com/JhowSL/agendar-desligamento-pc/releases){:target="_blank"} da versão mais recente.
 
 ### 2.Execute o Executável:
 
@@ -53,4 +53,8 @@ python agendarDesligamento.py
 *Créditos
 Este projeto foi criado com a ajuda do ChatGPT da OpenAI.*
 
-_Observação: Certifique-se de ter o Python instalado no seu sistema antes de executar o script. Além disso, o desligamento automático pode ter impacto na sua experiência de uso, então use com cuidado e salve seu trabalho antes de agendar o desligamento._
+...
+
+**Observação:** Durante o desenvolvimento, certifique-se de ter o Python instalado no seu sistema antes de executar o script (`agendarDesligamento.py`). No entanto, para usuários finais, não é necessário ter o Python instalado para executar o arquivo `agendarDesligamento.exe`. Este executável é independente e incorpora todas as dependências necessárias para uma experiência de usuário sem complicações.
+
+...
