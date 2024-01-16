@@ -35,7 +35,7 @@ python agendarDesligamento.py
 ### 1. Baixe o Executável:
 
 - Acesse a página de lançamentos.
-- Baixe o arquivo [agendarDesligamento.exe](https://github.com/JhowSL/agendar-desligamento-pc/releases){:target="_blank"} da versão mais recente.
+- Baixe o arquivo [agendarDesligamento.exe](https://github.com/JhowSL/agendar-desligamento-pc/releases) da versão mais recente.
 
 ### 2.Execute o Executável:
 
