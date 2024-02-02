@@ -1,0 +1,7 @@
+pycache/
+*.json
+*.pyc
+*.pyo
+*.pyd
+*.exe
+relatorio_desligamento.txt

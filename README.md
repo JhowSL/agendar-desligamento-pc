@@ -5,9 +5,11 @@ Bem-vindo ao Agendador de Desligamento, um script Python que permite que você a
 ## Funcionalidades
 
 - Agendamento de desligamento em horas ou minutos.
+- Agendamento de desligamento em um horário específico.
 - Criação de relatório com a data e hora do agendamento e desligamento.
-- Opção de pausa antes de desligar para dar tempo ao usuário.
 - Possibilidade de cancelar o desligamento.
+
+---
 
 ## Como Utilizar
 
@@ -24,11 +26,14 @@ cd agendador-desligamento
 ```bash
 python agendarDesligamento.py
 ```
-### 1. Siga as instruções no terminal para escolher entre horas (1), minutos (2) ou cancelar (3) o desligamento.
+### 1.
+- Siga as instruções no terminal para escolher entre horas (1), minutos (2), desligar em um horário específico (3) ou cancelar o desligamento (4)
 
-### 2. O desligamento será agendado ou cancelado, e um relatório será criado no arquivo relatorio_desligamento.txt.
+### 2.
+- O desligamento será agendado ou cancelado, e um relatório será criado no arquivo relatorio_desligamento.txt.
 
-### 3. Aguarde o tempo agendado e o computador será desligado, ou pressione Enter para cancelar.
+### 3.
+- Aguarde o tempo agendado e o computador será desligado, ou pressione Enter para cancelar.
 ##
 
 # Utilizando o Executável (Para Usuários Leigos)
@@ -43,7 +48,7 @@ python agendarDesligamento.py
 
 ### 3. Escolha a Opção:
 
-- Siga as instruções no console para escolher entre horas (1), minutos (2) ou cancelar (3) o desligamento.
+- Siga as instruções no console para escolher entre horas (1), minutos (2), desligar em um horário específico (3) ou cancelar o desligamento (4).
 
 ### 4. Aguarde ou Cancelamento:
 
@@ -53,8 +58,5 @@ python agendarDesligamento.py
 *Créditos
 Este projeto foi criado com a ajuda do ChatGPT da OpenAI.*
 
-...
 
-**Observação:** Durante o desenvolvimento, certifique-se de ter o Python instalado no seu sistema antes de executar o script (`agendarDesligamento.py`). No entanto, para usuários finais, não é necessário ter o Python instalado para executar o arquivo `agendarDesligamento.exe`. Este executável é independente e incorpora todas as dependências necessárias para uma experiência de usuário sem complicações.
-
-...
+_Observação: Certifique-se de ter o Python instalado no seu sistema antes de executar o script. Além disso, o desligamento automático pode ter impacto na sua experiência de uso, então use com cuidado e salve seu trabalho antes de agendar o desligamento._
