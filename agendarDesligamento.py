@@ -16,23 +16,27 @@ def agendar_desligamento():
             "Escolha uma opção:\n"
             "  [1] Agendar desligamento em horas\n"
             "  [2] Agendar desligamento em minutos\n"
-            "  [3] Cancelar desligamento\n"
+            "  [3] Agendar desligamento em um horário específico\n"
+            "  [4] Cancelar desligamento\n"
             "Escolha: "
         )
 
-        if escolha in {"1", "2", "3"}:
+        if escolha in {"1", "2", "3", "4"}:
             break
         else:
             print(
-                "Opção inválida. Por favor, escolha '1' para horas, '2' para minutos ou '3' para cancelar."
+                "Opção inválida. Por favor, escolha '1' para horas, '2' para minutos, '3' para horário específico ou '4' para cancelar."
             )
             linha_divisoria()
 
-    if escolha == "3":
+    if escolha == "4":
         cancelar_desligamento()
         return
 
-    tempo_agendado = obter_tempo_agendado(escolha)
+    if escolha == "3":
+        tempo_agendado = obter_tempo_especifico()
+    else:
+        tempo_agendado = obter_tempo_agendado(escolha)
 
     linha_divisoria()
     print(f"Desligamento agendado para ocorrer em {tempo_agendado} segundos.")
@@ -75,6 +79,24 @@ def obter_tempo_agendado(opcao):
         return (
             int(input("Digite o número de minutos para agendar o desligamento: ")) * 60
         )
+
+
+def obter_tempo_especifico():
+    # Agendamento para um horário específico
+    hora_minuto = input(
+        "Digite o horário no formato HH:MM para agendar o desligamento: "
+    )
+    hora, minuto = map(int, hora_minuto.split(":"))
+
+    agora = datetime.datetime.now()
+    horario_agendado = agora.replace(hour=hora, minute=minuto, second=0, microsecond=0)
+
+    # Verificar se o horário agendado já passou, se sim, agendar para o próximo dia
+    if agora > horario_agendado:
+        horario_agendado += datetime.timedelta(days=1)
+
+    tempo_agendado = int((horario_agendado - agora).total_seconds())
+    return tempo_agendado
 
 
 def cancelar_desligamento():
