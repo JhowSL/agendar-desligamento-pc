@@ -8,6 +8,7 @@ Bem-vindo ao Agendador de Desligamento, um script Python que permite que você a
 - Agendamento de desligamento em um horário específico.
 - Criação de relatório com a data e hora do agendamento e desligamento.
 - Possibilidade de cancelar o desligamento.
+- Reiniciar o sistema
 
 ---
 
@@ -22,12 +23,17 @@ git clone https://github.com/seu-usuario/agendador-desligamento.git
 cd agendador-desligamento
 ```
 
-## 1. Execute o script:
+## 1. Execute o script ou faça o build:
 ```bash
 python agendarDesligamento.py
 ```
+```bash
+pip install pyinstaller
+pyinstaller --onefile .\agendarDesligamento.py
+```
+
 ### 1.
-- Siga as instruções no terminal para escolher entre horas (1), minutos (2), desligar em um horário específico (3) ou cancelar o desligamento (4)
+- Siga as instruções no terminal para escolher entre horas (1), minutos (2), desligar em um horário específico (3) reiniicar o sistema (4) ou cancelar o desligamento (5)
 
 ### 2.
 - O desligamento será agendado ou cancelado, e um relatório será criado no arquivo relatorio_desligamento.txt.

@@ -5,3 +5,5 @@ pycache/
 *.pyd
 *.exe
 relatorio_desligamento.txt
+
+build

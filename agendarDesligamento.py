@@ -17,19 +17,24 @@ def agendar_desligamento():
             "  [1] Agendar desligamento em horas\n"
             "  [2] Agendar desligamento em minutos\n"
             "  [3] Agendar desligamento em um horário específico\n"
-            "  [4] Cancelar desligamento\n"
+            "  [4] Reiniciar o sistema\n"
+            "  [5] Cancelar desligamento\n"
             "Escolha: "
         )
 
-        if escolha in {"1", "2", "3", "4"}:
+        if escolha in {"1", "2", "3", "4", "5"}:
             break
         else:
             print(
-                "Opção inválida. Por favor, escolha '1' para horas, '2' para minutos, '3' para horário específico ou '4' para cancelar."
+                "Opção inválida. Por favor, escolha '1' para horas, '2' para minutos, '3' para horário específico, '4' para reiniciar o sistema ou '5' para cancelar."
             )
             linha_divisoria()
 
     if escolha == "4":
+        reinicia_sistema()
+        return
+
+    if escolha == "5":
         cancelar_desligamento()
         return
 
@@ -103,6 +108,12 @@ def cancelar_desligamento():
     os.system("shutdown /a")  # Comando para cancelar o desligamento
     linha_divisoria()
     print("Desligamento cancelado.\n")
+
+
+def reinicia_sistema():
+    os.system("shutdown -r -t 10")
+    linha_divisoria()
+    print("O sistema será reiniciado. \n")
 
 
 if __name__ == "__main__":
